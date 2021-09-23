@@ -1,0 +1,13 @@
+[Unit]
+Description=Idle manager for Wayland
+Documentation=man:swayidle(1)
+PartOf=graphical-session.target
+After=sway.service
+
+[Service]
+Type=simple
+ExecStart=/home/andres/src/sway/swayidle/build/swayidle -w idlehint 5 before-sleep 'swaylock -f -c 000000' lock 'swaylock -f' timeout 600 'swaylock -f' timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' unlock 'swaymsg "output * dpms on"'
+Slice=session.slice
+
+[Install]
+WantedBy=sway-session.target

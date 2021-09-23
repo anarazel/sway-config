@@ -1,0 +1,4 @@
+#! /bin/sh
+
+#exec gnome-session --systemd --debug --session=sway-session > /tmp/sway-service.log 2>&1
+/usr/libexec/gnome-session-binary --systemd --debug --session=sway-session "$@"

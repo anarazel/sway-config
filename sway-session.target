@@ -1,0 +1,10 @@
+[Unit]
+Description=Sway Service
+DefaultDependencies=no
+
+Requisite=gnome-session-initialized.target
+PartOf=gnome-session-initialized.target
+Before=gnome-session-initialized.target
+
+[Unit]
+Wants=sway.service
