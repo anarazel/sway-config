@@ -6,7 +6,7 @@ After=sway.service
 
 [Service]
 Type=simple
-ExecStart=/home/andres/src/sway/swayidle/build/swayidle -w idlehint 5 before-sleep 'swaylock -f -c 000000' lock 'swaylock -f' timeout 600 'swaylock -f' timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' unlock 'swaymsg "output * dpms on"'
+ExecStart=/home/andres/build/sway/install/bin/swayidle -w idlehint 5 before-sleep 'swaylock -f' lock 'swaylock -f' timeout 600 'swaylock -f' timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' unlock 'swaymsg "output * dpms on"'
 Slice=session.slice
 
 [Install]

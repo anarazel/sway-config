@@ -19,7 +19,7 @@ Type=notify
 NotifyAccess=all
 EnvironmentFile=/etc/sway/sway-gnome.env
 EnvironmentFile=-%h/.config/sway/env
-ExecStart=/usr/bin/sway
+ExecStart=/home/andres/build/sway/install/bin/sway
 
 # unset some environment variables that were set by the shell and won't work now that the shell is gone
 ExecStopPost=/usr/bin/systemctl --user unset-environment SWAYSOCK DISPLAY I3SOCK WAYLAND_DISPLAY XAUTHORITY
